@@ -1,0 +1,49 @@
+@use "../utils/" as *;
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 40px;
+
+  svg{
+    fill: $light-red;
+  }
+  nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 57px;
+
+    .navLink{
+      font-size: 24px;
+      font-weight: 500;    
+    }
+    
+    .navLink:hover,
+    .activeLink{
+      text-decoration: underline;
+    }
+
+  }
+
+  @media (max-width:769px){
+    margin-top: 20px;
+
+    svg{
+      width: 145px;
+     height: 47px;
+    }
+
+    .navMenu{
+      gap:26px;
+
+      .navLink{
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

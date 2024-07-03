@@ -1,0 +1,122 @@
+@use "../utils/" as *;
+
+
+
+.lodging_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 40px;
+
+  @media (max-width:769px){
+    flex-direction: column;
+    }
+
+  .lodging_titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;    
+  
+    h2{
+      font-size: 36px;
+      font-weight: 500;
+      color: $light-red;
+      margin-bottom: 5px;
+
+      @media (max-width:769px) {   
+          font-size: 18px;    
+      }
+    }
+    p{
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      @media (max-width:769px) {   
+        font-size: 14px;    
+      }
+    }
+  
+    .lodging_tags{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      gap: 10px;     
+      
+      .tag_content{
+        color: $white;
+        background-color: $light-red;
+        border-radius: 10px;
+        padding: 4px 40px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+
+        @media (max-width: 769px){
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  // Information sur l'hôte du logement
+  .lodging_host{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+  
+    @media (max-width: 769px){
+      flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    }
+  
+    .host_info{
+      display: flex;
+      flex-flow: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+  
+      img{
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background-color: $light-grey;
+      }
+      .host_name{
+        text-align: right;
+        color: $light-red;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  
+    .lodging_rating{
+      display: flex;
+      flex-flow: row nowrap;
+  
+      svg{
+        width: 25px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+// Description et Inventaire du logement
+.lodging_desc { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+
+  @media (max-width:1024px){
+    grid-template-columns: 1fr;
+  }
+}
